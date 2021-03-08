@@ -1,0 +1,117 @@
+:root{
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ELEMENTOS BASE*/
+
+body{
+    background: var(--preta);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+}
+/*Ao configurar o display como flex, ou seja, utilizar o flexbox, por padrão o programa joga tudo pra linha (row). Sendo assim, o "flex-direction: row" não precisaria estar no código, mas, por caráter semântico, foi utilizado.*/
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:#aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*FILME PRINCIPAL*/
+
+.filme-principal {
+    font-size: 18px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../img/watchmen.jpg);
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+/*O "background: linear-gradient" possibilita criar uma transperência sobre a imagem. MAS ATENÇÃO: o gradiente sempre pede mais de uma cor, por isso há duas vezes o preto no código. Se não fizer isto, dá erro. */
+
+/*Através do backgroud url foi colocada a imagem como fundo. Porém, inicialmente, apenas um pequeno pedaço da imagem apareceu. Para aparecer conforme o padrão do Netflix, foi preciso delimitar e aumentar o tamanho (height) da área que a imagem iria cobrir.Ainda assim, mesmo delimitando o tamanho a imagem ainda não aparecia completa. Isto foi possível ao incluir o background-size: cover (que determina que dentro desses 400px, a imagem deve cobrir a área completamente.*/
+
+/*PARA LEMBRAR: o justify-content sempre segue a direção do flex-direction.*/
+
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Para a medida das margens é melhor trabalhar com porcentagem do que com pixls, já que assim, o programa calcula automaticamente o posicionamento adequado de acordo com o dado informado. Isto é importante para deixar o site responsivo. */
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+/*"cursor: pointer" o mouse muda para ponteiro, para identificar que ali é uma área clicável.*/
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
