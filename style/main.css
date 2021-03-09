@@ -46,7 +46,7 @@ header nav a:hover{
 
 .filme-principal {
     font-size: 18px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../img/watchmen.jpg);
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../Metallica/metallicashow.jpg);
     height: 400px;
     background-size: cover;
     display: flex;
@@ -112,6 +112,18 @@ header nav a:hover{
     display: block;
 }
 
+.box-filme:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .carrossel-filmes{
     margin-top: 5px;
+}
+
+.botoes-ancora{
+    text-decoration: none;
 }
